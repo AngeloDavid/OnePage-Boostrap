@@ -14,93 +14,82 @@
         'link':[
             {
                 'title':'facebook',
-                'url':'https://www.facebook.com/tireman',
+                'url':'https://www.facebook.com/Tireman-Center',
                 'img':'icon-facebook'
             },
             {
                 'title':'instagram',
-                'url':'https://www.instagram.com/ezrose_ecuador/',
+                'url':'https://www.instagram.com/Tireman-Center/',
                 'img':'icon-instagram'
             },
-            {
-                'title':'youtube',
-                'url':'https://www.youtube.com/channel/UCW3g6hZxeTnqYyBUXU0vULQ/',
-                'img':'icon-youtube'
-            }
         ],
         'Servicios':[
             {
                 'title':'Venta de llantas',
-                'descp':'I have the simplest tastes, I am always satisfied with the best.',
+                'descp':'La seguridad es nuestro principal objetivo Tireman Center',
                 'img':'./assets/img/prueba.png',
                 'url':''
             },
             {
                 'title':'Venta de aros',
-                'descp':'I have the simplest tastes, I am always satisfied with the best.',
+                'descp':'Aros en variedad de materiales para su vehículo Tireman Center',
                 'img':'./assets/img/prueba.png',
                 'url':''
             },
             {
                 'title':'Alineación 4D',
-                'descp':'I have the simplest tastes, I am always satisfied with the best.',
+                'descp':'Sabemos que necesitas seguridad al viajar, por eso es importante no perder ningún detalle en tu vehículo.',
                 'img':'./assets/img/prueba.png',
                 'url':''
             },
             {
                 'title':'Balanceo 4D',
-                'descp':'I have the simplest tastes, I am always satisfied with the best.',
+                'descp':'La alineación 4D evitará el desgaste irregular de las llantas, no será la excusa del por qué no puedes acompañar a tus amigos o familia en ese viaje que tanto han esperado Tireman Center',
                 'img':'./assets/img/prueba.png',
                 'url':''
             },
             {
                 'title':'Revisión con Scaner',
-                'descp':'I have the simplest tastes, I am always satisfied with the best.',
+                'descp':'El servicio scanner establece una comunicación con la unidad de control y ‘preguntarle’ si ha detectado algún código de falla, con esta información vital nuestros técnicos ubican el problema.',
                 'img':'./assets/img/prueba.png',
                 'url':''
             },
             {
                 'title':'Cambio de aceite',
-                'descp':'I have the simplest tastes, I am always satisfied with the best.',
+                'descp':'En Tireman Center sabemos lo importante que es el cambio de aceite. Tener bien lubricadas todas las piezas del motor permite evitar su desgaste y preservar el motor.',
                 'img':'./assets/img/prueba.png',
                 'url':''
             },
             {
                 'title':'ABC de Motor',
-                'descp':'I have the simplest tastes, I am always satisfied with the best.',
+                'descp':'El ABC garantiza una conducción segura tanto para nosotros así como para todos los que formamos parte de la movilidad de la ciudad.',
                 'img':'./assets/img/prueba.png',
                 'url':''
             },
             {
                 'title':'ABC de Frenos',
-                'descp':'I have the simplest tastes, I am always satisfied with the best.',
+                'descp':'Es indiscutible que los frenos son uno de los sistemas de seguridad más importantes, estamos comprometidos con tu seguridad Tireman Center',
                 'img':'./assets/img/prueba.png',
                 'url':''
             },
             {
                 'title':'Limpieza de inyectores',
-                'descp':'I have the simplest tastes, I am always satisfied with the best.',
+                'descp':'Los inyectores de combustible gasolina deben de estar limpios para un buen funcionamiento del motor, darles mantenimiento es importante para que no se obstruyan. Sabemos como hacerlo Tireman Center',
                 'img':'./assets/img/prueba.png',
                 'url':''
             },
             {
                 'title':'Suspensión',
-                'descp':'I have the simplest tastes, I am always satisfied with the best.',
+                'descp':'El sistema de suspensión de un vehículo es una de las partes más fundamentales para tener un control adecuado de este, y tener una experiencia de manejo cómoda. Sabemos como hacerlo Tireman Center',
                 'img':'./assets/img/prueba.png',
                 'url':''
             },
             {
                 'title':'Inflado con nitrógeno',
-                'descp':'I have the simplest tastes, I am always satisfied with the best.',
+                'descp':'El inflado con nitrógeno es un servicio lleno de ventajas que, entre otras cosas, nos ayuda a preservar los neumáticos y las llantas mejor que el inflado con aire convencional.',
                 'img':'./assets/img/prueba.png',
                 'url':''
-            },
-            {
-                'title':'Mas de 4000 clientes atendidos',
-                'descp':'I have the simplest tastes, I am always satisfied with the best.',
-                'img':'./assets/img/prueba.png',
-                'url':''
-            }            
+            }                      
         ],
         'videoUrl':"https://www.youtube.com/embed/yckK3hDKVZg",
         'marcas':[

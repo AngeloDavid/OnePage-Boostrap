@@ -139,7 +139,7 @@ a:after {
 
 .f h3 {
 	color: white;
-	font-size: 28px;
+	font-size: 3.5em;
 	font-weight: 700;
 	letter-spacing: 1px;	
 }
@@ -151,7 +151,7 @@ a:after {
 }
 
  p {
-	font-size: 20px;
+	font-size: 1.3em;
 	color: #f2f2f2;
 }
 
@@ -168,7 +168,7 @@ a:after {
 	width: 260px;
 	height: 100%;
 	top: 0;
-	z-index: 10;
+	z-index: 25;
 	text-align: left;
 }
 
@@ -317,6 +317,10 @@ a:after {
 			transition: all .1s ease-in-out;
 }
 
+#portfolio .f{
+	padding-right: 8%;
+	padding-left: 8%;
+}
 
 #portfolio .contendio {
 	
@@ -353,13 +357,13 @@ a:after {
   
   #portfolio .text {
 	color: white;
-	font-size: 20px;
+	font-size: 0.9em !important;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
-	white-space: nowrap;
+	width: 80%;
   }
 
   #portfolio  .overlayr {
@@ -685,28 +689,28 @@ a:after {
   .untitled__slide:nth-child(1) .untitled__slideBg {
 	/* background-image: url(https://unsplash.it/g/1500/2200?image=838); */
 	
-	background-image: url("../img/Fondo/1414.jpg"); 
+	background-image: url("../img/Fondo/1414-min.jpg"); 
   }
   .untitled__slide:nth-child(2) {
 	-webkit-animation-delay: 5s;
 			animation-delay: 5s;
   }
   .untitled__slide:nth-child(2) .untitled__slideBg {
-	background-image: url("../img/Fondo/1176.jpg");
+	background-image: url("../img/Fondo/1176-min.jpg");
   }
   .untitled__slide:nth-child(3) {
 	-webkit-animation-delay: 10s;
 			animation-delay: 10s;
   }
   .untitled__slide:nth-child(3) .untitled__slideBg {
-	background-image: url("../img/Fondo/1524.jpg");
+	background-image: url("../img/Fondo/1524-min.jpg");
   }
   .untitled__slide:nth-child(4) {
 	-webkit-animation-delay: 15s;
 			animation-delay: 15s;
   }
   .untitled__slide:nth-child(4) .untitled__slideBg {
-	background-image: url("../img/Fondo/918.jpg");
+	background-image: url("../img/Fondo/918-min.jpg");
   }
   .untitled__slideBg {
 	position: relative;
@@ -829,4 +833,11 @@ a:after {
 			transform: translate3d(0px, 0px, 0);
 	box-shadow: 0px 0px 0 rgba(255, 255, 255, 0.5);
   }
-  
+	
+	.modal-header{
+		text-align: center;
+	}
+	.btn-warning{
+		background-color: #fbd601;
+		border-color: #f5d720
+	}
