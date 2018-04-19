@@ -36,10 +36,10 @@
 	<!-- Menu -->
 	<nav class="menu" id="theMenu" ng-controller="menu as mn" >
 		<div class="menu-wrap">
-			<h1 class="logo"><a href="index.html#home">{{mn.title}}</a></h1>
+			<h1 class="logo"><a href="#home" scroll-to-bookmark="#home">{{mn.title}}</a></h1>
 			<i class="icon-remove menu-close"></i>			
 
-			<a href="{{itema.url}}" class="smoothScroll" ng-repeat="itema in mn.menu" >{{itema.titulo}}</a>			
+			<a href="{{itema.url}}" class="smoothScroll"  scroll-to-bookmark="{{itema.url}}"  ng-repeat="itema in mn.menu" >{{itema.titulo}}</a>			
 
 			<div ng-repeat="itema in mn.redes">
 					<a href="{{itema.url}}"><i class="{{itema.img}}"></i></a>
@@ -54,7 +54,7 @@
 
 	
 	<!-- ========== HEADER SECTION ========== -->
-	<section id="home" name="home" ng-controller="home as hm" >
+	<section id="home" name="home" ng-controller="home as hm"  scroll-bookmark="home" >
 	<div id="headerwrap">
 		<div class="container">
 			<div class="logo">
@@ -86,7 +86,7 @@
 	
 	
 	<!-- ========== ABOUT SECTION ========== -->
-	<section id="about" name="about" ng-controller="quienes_somos as qs">
+	<section id="about" name="about" ng-controller="quienes_somos as qs" scroll-bookmark="about" >
 		<div class="f">
 			<div class="container">
 				<div class="row">
@@ -148,7 +148,7 @@
 	</section>
 
 	<!-- ========== CAROUSEL SECTION ========== -->	
-	<section id="portfolio" name="portfolio" ng-controller="servicios as ss">
+	<section id="portfolio" name="portfolio" ng-controller="servicios as ss" scroll-bookmark="portfolio">
 	<div class="f">
 		<div class="container">
 			<div class="row centered">
@@ -179,7 +179,7 @@
 	</section>
 
 	<!-- ========== CONTACT SECTION ========== -->
-	<section id="contact" name="contact" ng-controller="contacto as ct">
+	<section id="contact" name="contact" ng-controller="contacto as ct" scroll-bookmark="contact">
 	<div class="f">
 		<div id="map"></div>
 		<div class="container">

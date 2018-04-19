@@ -57,25 +57,25 @@
             {
                 'title':'Cambio de aceite',
                 'descp':'En Tireman Center sabemos lo importante que es el cambio de aceite. Tener bien lubricadas todas las piezas del motor permite evitar su desgaste y preservar el motor.',
-                'img':'./assets/img/prueba.png',
+                'img':'./assets/img/servicios/cambio_aceite.png',
                 'url':''
             },
             {
                 'title':'ABC de Motor',
                 'descp':'El ABC garantiza una conducción segura tanto para nosotros así como para todos los que formamos parte de la movilidad de la ciudad.',
-                'img':'./assets/img/prueba.png',
+                'img':'./assets/img/servicios/ABC_Motor.png',
                 'url':''
             },
             {
                 'title':'ABC de Frenos',
                 'descp':'Es indiscutible que los frenos son uno de los sistemas de seguridad más importantes, estamos comprometidos con tu seguridad Tireman Center',
-                'img':'./assets/img/prueba.png',
+                'img':'./assets/img/servicios/ABC _Frenos.png',
                 'url':''
             },
             {
                 'title':'Limpieza de inyectores',
                 'descp':'Los inyectores de combustible gasolina deben de estar limpios para un buen funcionamiento del motor, darles mantenimiento es importante para que no se obstruyan. Sabemos como hacerlo Tireman Center',
-                'img':'./assets/img/prueba.png',
+                'img':'./assets/img/servicios/limpieza_inyectores.png',
                 'url':''
             },
             {
@@ -230,5 +230,22 @@
             }
         };
     }]);
+
+    app.directive('scrollToBookmark', function() {  
+        return {
+            link: function(scope, element, attrs) {
+                var value = attrs.href;
+                
+                element.click(function() {
+                  scope.$apply(function() {
+                    var element = $(value);                   
+                    if(element.length) {
+                        $('html,body').animate({scrollTop: element.offset().top }, "slow");                        
+                    }
+                  });
+                });
+              } 
+        };
+      });
 })();
 
