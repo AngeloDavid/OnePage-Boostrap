@@ -42,7 +42,7 @@
 			<a href="{{itema.url}}" class="smoothScroll"  scroll-to-bookmark="{{itema.url}}"  ng-repeat="itema in mn.menu" >{{itema.titulo}}</a>			
 
 			<div ng-repeat="itema in mn.redes">
-					<a href="{{itema.url}}"><i class="{{itema.img}}"></i></a>
+					<a href="{{itema.url}}" target="_blank" ><i class="{{itema.img}}"></i></a>
 			</div>
 			<a href="#"><i class="icon-envelope"></i></a>
 		</div>
@@ -75,7 +75,7 @@
 	</section>
 	<section id="marcas" ng-controller="marcas as ms" >
 		<div class="container">
-			<data-owl-carousel class="owl-carousel" data-options="{navigation: false, pagination: false, rewindNav : false, items:4, loop:false,  margin:25, autoplay:true, autoplayHoverPause:true}">
+			<data-owl-carousel class="owl-carousel" data-options="{navigation: false, pagination: false, rewindNav : false, items:4, loop:true,  margin:25, autoplay:true, autoplayHoverPause:true}">
 						<div owl-carousel-item="" ng-repeat="item in ms.marcas" class="item">
 							<img src="{{item.url}}" alt="{{item.title}}">
 				</div>
@@ -159,7 +159,7 @@
 				</div>				
 			</div><!-- row -->
 			<div class="row centered">
-				<div class="col-lg-4  col-sm-6 col-xs-12" style="padding-bottom: 3%;" ng-repeat="item in ss.list track by $index " >
+				<div class="col-lg-4  col-sm-6 col-xs-12" style="padding-bottom: 3%;" ng-repeat="item in ss.list track by $index " ng-if="item.status" >
 					<div class="contendio">
 							<img src="{{item.img}}" width="200" class="image">
 							
@@ -172,6 +172,9 @@
 					</div>
 					
 				</div><!-- col-lg-8 -->
+				<div class="col-lg-12">
+					<p><button type="button" class="btn btn-warning" ng-click="ss.viewmore()" >Leer más </button></p>
+				</div>
 			</div>
 		</div><!-- container -->
 		

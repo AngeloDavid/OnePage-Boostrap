@@ -28,67 +28,92 @@
                 'title':'Venta de llantas',
                 'descp':'La seguridad es nuestro principal objetivo Tireman Center',
                 'img':'./assets/img/prueba.png',
-                'url':''
+                'url':'',
+                'ord':'1',
+                'status':true,
             },
             {
                 'title':'Venta de aros',
                 'descp':'Aros en variedad de materiales para su vehículo Tireman Center',
                 'img':'./assets/img/prueba.png',
-                'url':''
+                'url':'',
+                'ord':'2',
+                'status':true,
+                
             },
             {
                 'title':'Alineación 4D',
                 'descp':'Sabemos que necesitas seguridad al viajar, por eso es importante no perder ningún detalle en tu vehículo.',
                 'img':'./assets/img/prueba.png',
-                'url':''
+                'url':'',
+                'ord':'3',
+                'status':true,
             },
             {
                 'title':'Balanceo 4D',
                 'descp':'La alineación 4D evitará el desgaste irregular de las llantas, no será la excusa del por qué no puedes acompañar a tus amigos o familia en ese viaje que tanto han esperado Tireman Center',
                 'img':'./assets/img/prueba.png',
-                'url':''
+                'url':'',
+                'ord':'4',
+                'status':true,
             },
             {
                 'title':'Revisión con Scaner',
                 'descp':'El servicio scanner establece una comunicación con la unidad de control y ‘preguntarle’ si ha detectado algún código de falla, con esta información vital nuestros técnicos ubican el problema.',
                 'img':'./assets/img/prueba.png',
-                'url':''
+                'url':'',
+                'ord':'5',
+                'status':true,
             },
             {
                 'title':'Cambio de aceite',
                 'descp':'En Tireman Center sabemos lo importante que es el cambio de aceite. Tener bien lubricadas todas las piezas del motor permite evitar su desgaste y preservar el motor.',
                 'img':'./assets/img/servicios/cambio_aceite.png',
-                'url':''
+                'url':'',
+                'ord':'6',
+                'status':true,
+
             },
             {
                 'title':'ABC de Motor',
                 'descp':'El ABC garantiza una conducción segura tanto para nosotros así como para todos los que formamos parte de la movilidad de la ciudad.',
                 'img':'./assets/img/servicios/ABC_Motor.png',
-                'url':''
+                'url':'',
+                'ord':'7',
+                'status':false,
             },
             {
                 'title':'ABC de Frenos',
                 'descp':'Es indiscutible que los frenos son uno de los sistemas de seguridad más importantes, estamos comprometidos con tu seguridad Tireman Center',
                 'img':'./assets/img/servicios/ABC _Frenos.png',
-                'url':''
+                'url':'',
+                'ord':'8',
+                'status':false,
             },
             {
                 'title':'Limpieza de inyectores',
                 'descp':'Los inyectores de combustible gasolina deben de estar limpios para un buen funcionamiento del motor, darles mantenimiento es importante para que no se obstruyan. Sabemos como hacerlo Tireman Center',
                 'img':'./assets/img/servicios/limpieza_inyectores.png',
-                'url':''
+                'url':'',
+                'ord':'9',
+                'status':false,
             },
             {
                 'title':'Suspensión',
                 'descp':'El sistema de suspensión de un vehículo es una de las partes más fundamentales para tener un control adecuado de este, y tener una experiencia de manejo cómoda. Sabemos como hacerlo Tireman Center',
                 'img':'./assets/img/prueba.png',
-                'url':''
+                'url':'',
+                'ord':'10',
+                'status':false,
+
             },
             {
                 'title':'Inflado con nitrógeno',
                 'descp':'El inflado con nitrógeno es un servicio lleno de ventajas que, entre otras cosas, nos ayuda a preservar los neumáticos y las llantas mejor que el inflado con aire convencional.',
                 'img':'./assets/img/prueba.png',
-                'url':''
+                'url':'',
+                'ord':'11',
+                'status':false,
             }                      
         ],
         'videoUrl':"https://www.youtube.com/embed/yckK3hDKVZg",
@@ -188,6 +213,9 @@
         servicios.parrafo="Ofrecemos los siguientes servicios.";
         servicios.list=empresa.Servicios;
         console.log(servicios.list);
+        servicios.viewmore= function () {
+            console.log("hola");
+        }
     }]);
     app.controller('contacto',['empresa',function (empresa) {
         var servicios = this;
@@ -206,6 +234,26 @@
                 scope.initCarousel = function(element) {
                   // provide any default options you want
                     var defaultOptions = {
+                        lazyLoad:true,
+                        loop:true,
+                        nav:false,
+                        dots:false,  
+                        autoplayTimeout:2000,  
+                        responsive:{
+                            0:{
+                                items:1,
+                                nav:false
+                            },
+                            600:{
+                                items:2,
+                                nav:false
+                            },
+                            1000:{
+                                items:4,
+                                nav:false,
+                                loop:true
+                            }
+                        }
                     };
                     var customOptions = scope.$eval($(element).attr('data-options'));
                     // combine the two options objects
