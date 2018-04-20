@@ -957,7 +957,7 @@ a:after {
 		}
 	 }
 
-	 .owl-carousel .owl-item img{
+	 #carros .owl-carousel .owl-item img{
 	 	max-width: 100px;
 	 	max-height: 200px;
 	 }
