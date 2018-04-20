@@ -6,11 +6,12 @@
     {
         'nombre':'Tireman Center',
         'email':'info@tireman-center.com',
-        'dirreccion':'La floresta',
+        'dirreccion':'Ladron de Guevara y Toledo',
+        'ciudad':'Quito,Ecuador',
         'lat':'000',
         'lng':'00',
         'logo':'./assets/img/logo.png',
-        'telefono':'+1(310)230-5140',
+        'telefono':'(593) 98 372 9540',
         'link':[
             {
                 'title':'facebook',
@@ -22,12 +23,18 @@
                 'url':'https://www.instagram.com/Tireman-Center/',
                 'img':'icon-instagram'
             },
+            {
+                'title':'whatApp',
+                'url':"https://api.whatsapp.com/send?phone=593997072376&text=Hola,%20TiremanCenter%20me%20interesa%20este%20servicio",
+                'img':'icon-phone'
+            }
+            
         ],
         'Servicios':[
             {
                 'title':'Venta de llantas',
                 'descp':'La seguridad es nuestro principal objetivo Tireman Center',
-                'img':'./assets/img/prueba.png',
+                'img':'./assets/img/servicios/Llantas.png',
                 'url':'',
                 'ord':'1',
                 'status':true,
@@ -35,7 +42,7 @@
             {
                 'title':'Venta de aros',
                 'descp':'Aros en variedad de materiales para su vehículo Tireman Center',
-                'img':'./assets/img/prueba.png',
+                'img':'./assets/img/servicios/aros.png',
                 'url':'',
                 'ord':'2',
                 'status':true,
@@ -44,7 +51,7 @@
             {
                 'title':'Alineación 4D',
                 'descp':'Sabemos que necesitas seguridad al viajar, por eso es importante no perder ningún detalle en tu vehículo.',
-                'img':'./assets/img/prueba.png',
+                'img':'./assets/img/servicios/Alineación 4D.png',
                 'url':'',
                 'ord':'3',
                 'status':true,
@@ -52,7 +59,7 @@
             {
                 'title':'Balanceo 4D',
                 'descp':'La alineación 4D evitará el desgaste irregular de las llantas, no será la excusa del por qué no puedes acompañar a tus amigos o familia en ese viaje que tanto han esperado Tireman Center',
-                'img':'./assets/img/prueba.png',
+                'img':'./assets/img/servicios/Balanceo 4D.png',
                 'url':'',
                 'ord':'4',
                 'status':true,
@@ -60,7 +67,7 @@
             {
                 'title':'Revisión con Scaner',
                 'descp':'El servicio scanner establece una comunicación con la unidad de control y ‘preguntarle’ si ha detectado algún código de falla, con esta información vital nuestros técnicos ubican el problema.',
-                'img':'./assets/img/prueba.png',
+                'img':'./assets/img/servicios/Scanner.png',
                 'url':'',
                 'ord':'5',
                 'status':true,
@@ -101,7 +108,7 @@
             {
                 'title':'Suspensión',
                 'descp':'El sistema de suspensión de un vehículo es una de las partes más fundamentales para tener un control adecuado de este, y tener una experiencia de manejo cómoda. Sabemos como hacerlo Tireman Center',
-                'img':'./assets/img/prueba.png',
+                'img':'./assets/img/servicios/Suspensión.png',
                 'url':'',
                 'ord':'10',
                 'status':false,
@@ -110,7 +117,7 @@
             {
                 'title':'Inflado con nitrógeno',
                 'descp':'El inflado con nitrógeno es un servicio lleno de ventajas que, entre otras cosas, nos ayuda a preservar los neumáticos y las llantas mejor que el inflado con aire convencional.',
-                'img':'./assets/img/prueba.png',
+                'img':'./assets/img/servicios/nitrogeno.png',
                 'url':'',
                 'ord':'11',
                 'status':false,
@@ -160,7 +167,8 @@
       
         var menu = this;
         menu.title= empresa.nombre;
-        menu.redes=empresa.link;        
+        menu.redes=empresa.link;   
+        menu.email=empresa.email;     
         menu.menu=[{
             'id':1,
             'titulo':'Inicio',
@@ -209,12 +217,29 @@
     }]);
     app.controller('servicios',['empresa',function (empresa) {
         var servicios = this;
+        var diServicios=true;    
         servicios.title="Nuestros servicios";
         servicios.parrafo="Ofrecemos los siguientes servicios.";
         servicios.list=empresa.Servicios;
+        servicios.buttomText="Leer mas";
         console.log(servicios.list);
         servicios.viewmore= function () {
             console.log("hola");
+            if(diServicios){
+                servicios.list.forEach(service => {
+                    service.status=true;
+                });
+                servicios.buttomText=" Ver Menos";
+            }else{
+                servicios.list.forEach(service => {
+                    if(service.ord>6){
+                        service.status=false;
+                    }
+                });
+                servicios.buttomText=" Leer Más";
+                $('html,body').animate({scrollTop: $("#portfolio").offset().top }, "slow");    
+            }
+            diServicios=!diServicios;            
         }
     }]);
     app.controller('contacto',['empresa',function (empresa) {
@@ -224,7 +249,8 @@
         servicios.email=empresa.email;
         servicios.telefono= empresa.telefono;
         servicios.dirreccion=empresa.dirreccion;
-        servicios.redes=empresa.link;        
+        servicios.redes=empresa.link; 
+        servicios.ciudad=empresa.ciudad;       
     }])
     app.directive("owlCarousel", function() {
         return {
