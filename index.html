@@ -188,7 +188,16 @@
 		
 	</div>	<!-- f -->
 	</section>
-
+	<section id="marcas" ng-controller="carros as car" >
+		<div class="container">
+			<data-owl-carousel class="owl-carousel" data-options="{navigation: false, pagination: false, rewindNav : false, items:4, loop:true,  margin:10, center:true, autoplay:true, autoplayHoverPause:true}">
+						<div owl-carousel-item="" ng-repeat="item in car.carros" class="item">
+							<img src="{{item.url}}" alt="{{item.title}}" ng-if="item.url!=''">
+				</div>
+			</data-owl-carousel>
+		</div>
+			
+	</section>
 	<!-- ========== CONTACT SECTION ========== -->
 	<section id="contact" name="contact" ng-controller="contacto as ct" scroll-bookmark="contact">
 			<div id="map"></div>

@@ -79,7 +79,7 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/Fondo/1414.jpg) no-repeat center top;
+	background: url(../img/Fondo/1414-min.jpg) no-repeat center top;
 	margin-top: -10px;
 	padding-top:20px;
 	text-align:center;
@@ -955,4 +955,9 @@ a:after {
 		.btn{
 			font-size: 0.9em;
 		}
+	 }
+
+	 .owl-carousel .owl-item img{
+	 	max-width: 100px;
+	 	max-height: 200px;
 	 }

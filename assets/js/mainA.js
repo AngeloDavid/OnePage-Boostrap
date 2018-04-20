@@ -161,6 +161,59 @@
                 'titulo':'Kendall',
                 'url':'./assets/img/marcas/kendall.png'
             }
+        ],
+        'carros':[
+            {
+                'titulo':'audi',
+                'url':'./assets/img/carros/audi.png'
+            },
+            {
+                'titulo':'chevrolet',
+                'url':'./assets/img/carros/chevrolet.png'
+            },
+            {
+                'titulo':'ford',
+                'url':'./assets/img/carros/ford.png'
+            },
+            {
+                'titulo':'kia',
+                'url':'./assets/img/carros/kia.png'
+            },
+            {
+                'titulo':'maserati',
+                'url':'./assets/img/carros/maserati.png'
+            },
+            {
+                'titulo':'mazda',
+                'url':'./assets/img/carros/mazda.png'
+            },
+            {
+                'titulo':'mercedes-benz',
+                'url':'./assets/img/carros/mercedes-benz.png'
+            },
+            {
+                'titulo':'nissan',
+                'url':'./assets/img/carros/nissan.png'
+            },
+            {
+                'titulo':'renault',
+                'url':'./assets/img/carros/renault.png'
+            },
+
+            {
+                'titulo':'toyota',
+                'url':'./assets/img/carros/toyota.png'
+            },
+            
+            {
+                'titulo':'volvo',
+                'url':'./assets/img/carros/volvo.png'
+            },
+            
+            {
+                'titulo':'VW',
+                'url':'./assets/img/carros/VW.png'
+            }
         ]
     });
     app.controller('menu',['empresa',function (empresa) {
@@ -204,6 +257,11 @@
     app.controller('marcas',['empresa',function (empresa) {
         var secction =this;
         secction.marcas = empresa.marcas;
+       
+    }]);
+    app.controller('carros',['empresa',function (empresa) {
+        var secction =this;
+        secction.carros = empresa.carros;
        
     }]);
     app.controller('quienes_somos',['empresa',function (empresa) {
