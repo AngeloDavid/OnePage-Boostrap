@@ -16,17 +16,17 @@
             {
                 'title':'facebook',
                 'url':'https://www.facebook.com/Tireman-Center',
-                'img':'icon-facebook'
+                'img':'fa fa-facebook'
             },
             {
                 'title':'instagram',
                 'url':'https://www.instagram.com/Tireman-Center/',
-                'img':'icon-instagram'
+                'img':'fa fa-instagram'
             },
             {
                 'title':'whatApp',
-                'url':"https://api.whatsapp.com/send?phone=593997072376&text=Hola,%20TiremanCenter%20me%20interesa%20este%20servicio",
-                'img':'icon-phone'
+                'url':"https://api.whatsapp.com/send?phone=5939837295406&text=Hola,%20TiremanCenter%20me%20interesa%20su%20servicio",
+                'img':'fa fa-whatsapp'
             }
             
         ],
@@ -236,7 +236,7 @@
                         service.status=false;
                     }
                 });
-                servicios.buttomText=" Leer Más";
+                servicios.buttomText=" Leer Más ";
                 $('html,body').animate({scrollTop: $("#portfolio").offset().top }, "slow");    
             }
             diServicios=!diServicios;            
@@ -250,7 +250,8 @@
         servicios.telefono= empresa.telefono;
         servicios.dirreccion=empresa.dirreccion;
         servicios.redes=empresa.link; 
-        servicios.ciudad=empresa.ciudad;       
+        servicios.ciudad=empresa.ciudad;   
+        servicios.list=empresa.Servicios;    
     }])
     app.directive("owlCarousel", function() {
         return {
@@ -260,6 +261,7 @@
                 scope.initCarousel = function(element) {
                   // provide any default options you want
                     var defaultOptions = {
+                        center:false,
                         lazyLoad:true,
                         loop:true,
                         nav:false,

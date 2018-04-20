@@ -100,11 +100,15 @@ a:after {
 }
 
 #headerwrap h1 {
-	margin-top: 150px;
+	/*margin-top: 150px;*/
 	color: white;
 	font-size: 70px;
 	font-weight: 700;
 }
+#headerwrap .texto{
+	margin-top: 150px;
+}
+#headerwrap .texto img{width:500px}
 
 #headerwrap h3 {
 	color: white;
@@ -347,7 +351,10 @@ a:after {
 	height: 100%;
 	transition: .5s ease;
 	border-radius: 10%;
-  }
+	}
+	#portfolio .itemService{
+		padding-bottom: 5%;
+	}
   
   #portfolio  .contendio:hover .overlay {
 	width: 100%;
@@ -382,7 +389,10 @@ a:after {
   #portfolio .contendio:hover .overlayr {
 	width: 100%;
 	border-radius: 10%;
-  }
+	}
+	#portfolio a{
+		cursor: pointer;
+	}
   #map {
 	height: 400px;
 	width: 100%;
@@ -396,7 +406,19 @@ a:after {
    .redes a:hover{
 	color: #c6ff00;
    } 
-
+	 .modal-content{
+		 background-color: #1a1a1a;
+		 color: #ffffff;
+	 }
+	 .modal-header{
+		 border-bottom-color: #fbd601;
+	 }
+	 .modal-footer{
+		 border-top-color:  #fbd601;
+	 }
+	 .modal-title, .close{
+		color: #fff;
+	 }
    .untitled {
 	overflow: hidden;
 	position: relative;
@@ -523,7 +545,7 @@ a:after {
 	left: 50%;
 	-webkit-transform: translate3d(-50%, 0, 0);
 			transform: translate3d(-50%, 0, 0);
-	background-color: #b3401a;
+	background-color: #0e487b;
 	pointer-events: auto;
   }
   .untitled__shutters:before {
@@ -638,7 +660,7 @@ a:after {
 	width: 100%;
 	top: 0;
 	left: 0;
-	background-color: #b3401a;
+	background-color: #0e487b;
   }
   .untitled__slide {
 	position: absolute;
@@ -720,8 +742,8 @@ a:after {
 	left: 0;
 	background-size: cover;
 	background-position: center;
-	background-color: #b3401a;
-	background-blend-mode: hard-light;
+	background-color: #0e487b;
+	background-blend-mode: soft-light;
 	opacity: 1;
 	z-index: -1;
 	-webkit-animation: bgInOut 5s infinite;
@@ -797,6 +819,7 @@ a:after {
   .untitled__slideContent span {
 	display: block;
 	font-size: 15vmin;
+	line-height: 1.1em;
   }
   
   .button {
@@ -841,3 +864,95 @@ a:after {
 		background-color: #fbd601;
 		border-color: #f5d720
 	}
+
+	@media (max-width: 576px) { 
+		.container{
+			padding-right: 40px;
+    	padding-left: 40px;
+		}
+		#headerwrap .texto img{
+			width: 90%;
+		}
+		#portfolio .itemService {
+			padding-bottom: 15%;
+		}
+		#portfolio .container{
+			padding-right: 0px;
+    	padding-left: 0px;
+		}
+		.redes a{
+			padding: 3%;
+			font-size: 1.4em;
+		}
+	 }
+	@media (min-width: 576px) and (max-width: 768px) { 
+		p {
+			font-size: 1.6em;
+			line-height: 1.3em;
+		}
+		#portfolio .container{
+			padding-right: 0px;
+    	padding-left: 0px;
+		}
+		#portfolio .text{
+			font-size: 0.8em !important;
+		}
+		.btn{
+			    font-size: 0.79em;
+		}
+	 }
+	@media (min-width: 768px) and (max-width: 992px) { 
+		.container{
+			padding-right: 25px;
+    	padding-left: 25px;
+		}
+		.untitled{
+			height: 500px;
+		}
+		p {
+			font-size: 1.5em;
+			line-height: 1.3em;
+		}
+		#portfolio .container{
+			padding-right: 0px;
+    	padding-left: 0px;
+		}
+		
+	 }
+	@media (min-width: 992px) and (max-width: 1200px) { 
+		.untitled{
+			height: 550px;
+		}
+		p {
+			font-size: 1.7em;
+			line-height: 1.3em;
+		}
+		#portfolio .container{
+			padding-right: 0px;
+    	padding-left: 0px;
+		}
+
+		#portfolio .text{
+			font-size: 1em !important;
+		}
+
+	 }
+	@media (min-width:  1200px)  { 
+		.untitled{
+			height: 500px;
+		}
+		p {
+			font-size: 1.7em;
+			line-height: 1.3em;
+		}
+		#portfolio .text{
+			font-size: 0.7em !important;
+		}
+		.untitled__slideContent span{
+			font-size: 12vmin;
+		}
+
+		.btn{
+			font-size: 0.9em;
+		}
+	 }
