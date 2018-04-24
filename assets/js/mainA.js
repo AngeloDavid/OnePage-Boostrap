@@ -301,6 +301,7 @@
     }]);
     app.controller('contacto',['empresa',function (empresa) {
         var servicios = this;
+        servicios.bandera= true;
         servicios.title="Contáctanos";
         servicios.parrafo="Ofrecemos los siguientes servicios.";
         servicios.email=empresa.email;
@@ -310,30 +311,33 @@
         servicios.ciudad=empresa.ciudad;   
         servicios.list=empresa.Servicios;   
         servicios.enviarDatos=function (datosf) {
-            console.log(datosf);
-            $.ajax({
-                    url: './assets/src/enviardatos.php',
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {Name: datosf.Name , Email: datosf.Email,Subject: datosf.Subject,Service:datosf.Service,Mensaje:datosf.Mensaje},
-                })
-                .done(function(data) {
-                    console.log(data);
-                    console.log("success");
-                    var html = '<div class="alert alert-info" role="alert">';
-                        html+='<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
-                        html+='<span aria-hidden="true">&times;</span></button>';
-                        html += data.respuesta;
-                        html += '</div>';
-                    $('#mensaje').html(html);
-                    
-                })
-                .fail(function() {
-                    console.log("error");
-                })
-                .always(function() {
-                    console.log("complete");
-                });
+            if (servicios.bandera){
+                console.log(datosf);
+                $.ajax({
+                        url: './assets/src/enviardatos.php',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {Name: datosf.Name , Email: datosf.Email,Subject: datosf.Subject,Service:datosf.Service,Mensaje:datosf.Mensaje},
+                    })
+                    .done(function(data) {
+                        console.log(data);
+                        console.log("success");
+                        var html = '<div class="alert alert-'+data.type+'" role="alert">';
+                            html+='<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                            html+='<span aria-hidden="true">&times;</span></button>';
+                            html += data.respuesta;
+                            html += '</div>';
+                        $('#mensaje').html(html);
+                        $("#form_contact")[0].reset();
+                        servicios.bandera= false;
+                    })
+                    .fail(function() {
+                        console.log("error");
+                    })
+                    .always(function() {
+                        console.log("complete");
+                    });
+            }           
         }; 
     }])
     app.directive("owlCarousel", function() {
