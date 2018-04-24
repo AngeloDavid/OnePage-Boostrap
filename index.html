@@ -32,7 +32,29 @@
   </head>
 
   <body data-spy="scroll" data-offset="0" data-target="#theMenu">
-		
+		<nav class="navbar navbar-default  hidden-xs hidden-sm" ng-controller="menu as mn">
+				<div class="container-fluid">
+				  <div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img src="{{mn.logo}}" width="150px"> 
+					</a>
+				  </div>
+				  <div class="menu-contenido">
+						<ul class="nav navbar-nav navbar-right">
+								<li  ng-repeat="itema in mn.redes">
+									<a href="{{itema.url}}" target="_blank" ><i class="{{itema.img}}"></i></a>
+								</li>
+								<li>
+									<a href="mailto:{{mn.email}}}?Subject=Me%20interesan%20sus%20servicios" target="_top"><i class="fa fa-envelope"></i></a>
+								</li>
+						</ul><br>
+						<ul  id="principal" class="nav navbar-nav">
+							<li  ng-repeat="itema in mn.menu"><a href="{{itema.url}}" class="smoothScroll"  scroll-to-bookmark="{{itema.url}}" >{{itema.titulo}}</a></li>			
+						</ul>
+				  </div>
+				  
+				</div>
+			</nav>	
 	<!-- Menu -->
 	<nav class="menu" id="theMenu" ng-controller="menu as mn" >
 		<div class="menu-wrap">
@@ -57,13 +79,13 @@
 	<section id="home" name="home" ng-controller="home as hm"  scroll-bookmark="home" >
 	<div id="headerwrap">
 		<div class="container">
-			<div class="logo">
-<!--				<img src="{{hm.logo}}" width="250px"> -->
+			<div class="logo hidden-md hidden-lg">
+				<img src="{{hm.logo}}" width="250px"> 
 			</div>
 			<br>
 			<div class="row texto">
-				<img class="animated fadeInDownBig" src="{{hm.logo}}">
-				<!--<h1>{{hm.title}}</h1> -->
+				<!--<img class="animated fadeInDownBig" src="{{hm.logo}}">
+				<h1>{{hm.title}}</h1> -->
 				<br>
 				<h3 class="animated zoomInUp" >{{hm.subtitle}}</h3>
 				<br>
@@ -97,14 +119,13 @@
 					<!-- INTRO INFORMATIO-->
 					<div class="col-lg-6 col-lg-offset-3">
 						<p>{{qs.parrafo}}</p>						
-						<p><button type="button" class="btn btn-warning">{{qs.boton.title}}</button></p>
+					<!--	<p><button type="button" class="btn btn-warning">{{qs.boton.title}}</button></p>-->
 					</div>								
 				</div>
 			</div><!-- /container -->
 		</div><!-- /f -->
 	</section>
-	<section >
-		
+	
 	
 	<section>
 			<div class="untitled">
@@ -123,6 +144,11 @@
 								
 								<span>Pagos</span> 
 								<span>Ágiles</span>
+								<span><i class="fa fa-cc-visa" aria-hidden="true"></i>
+									  <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+									  <i class="fa fa-cc-diners-club" aria-hidden="true"></i>
+									  <i class="fa fa-cc-amex" aria-hidden="true"></i>
+								</span>
 								<!--<a class="button" href="https://unsplash.com/@madbyte" target="/black">Unsplash Profile</a>-->
 							</div>
 						</div>
@@ -137,8 +163,8 @@
 						<div class="untitled__slide">
 							<div class="untitled__slideBg"></div>
 							<div class="untitled__slideContent">
-								<span>Más de 4000</span> 
-								<span>clientes</span>
+								<span>Clientes</span> 
+								<span>Satisfecos</span>
 								<!--<a class="button" href="https://unsplash.com/@mariocalvo" target="/black">Atendidos</a>-->
 							</div>
 						</div>
@@ -190,7 +216,7 @@
 	</section>
 	<section id="marcas" ng-controller="carros as car" >
 		<div id="carros" class="container">
-			<data-owl-carousel class="owl-carousel" data-options="{navigation: false, pagination: false, rewindNav : false, items:4, loop:true,  margin:10, center:true, autoplay:true, autoplayHoverPause:true}">
+			<data-owl-carousel class="owl-carousel" data-options="{navigation: false, pagination: false, rewindNav : false, items:5, rtl: true, loop:true,  margin:5, center:true, autoplay:true, autoplayHoverPause:true}">
 						<div owl-carousel-item="" ng-repeat="item in car.carros" class="item">
 							<img src="{{item.url}}" alt="{{item.title}}" ng-if="item.url!=''">
 				</div>
@@ -276,7 +302,7 @@
 			</div>
 			</div>
 		</div>
-</section>
+	</section>
 	
 
     <!-- Bootstrap core JavaScript

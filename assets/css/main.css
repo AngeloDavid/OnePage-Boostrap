@@ -38,7 +38,7 @@ p {
 
 /* Links */
 a {
-    color: #c6ff00;
+    color: #f5d720;
     word-wrap: break-word;
 
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -79,7 +79,7 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/Fondo/1414-min.jpg) no-repeat center top;
+	background: url(../img/Fondo/918-min.jpg) no-repeat center top;
 	margin-top: -10px;
 	padding-top:20px;
 	text-align:center;
@@ -115,7 +115,8 @@ a:after {
 	font-size: 30px;
 	font-weight: 100;
     font-family: 'EB Garamond', serif;
-    font-style: oblique;
+		font-style: oblique;
+		text-shadow: 2px 2px 4px #1d2131;
 }
 
 #headerwrap .logo {
@@ -135,7 +136,7 @@ a:after {
 /* Footer Wrap */
 
 .f {
-	background: #1a1a1a;
+	background: #29304a;
 	padding-top: 70px;
 	padding-bottom: 70px;
 	text-align: center
@@ -184,7 +185,7 @@ a:after {
 	position: absolute;
 	top: 0;
 	left: 60px;
-	background: #1a1a1a;
+	background: #1d2131;
 	width: 200px;
 	height: 100%;
 }
@@ -392,6 +393,7 @@ a:after {
 	}
 	#portfolio a{
 		cursor: pointer;
+		color: #f5d720;
 	}
   #map {
 	height: 400px;
@@ -404,10 +406,10 @@ a:after {
 	   size: 2.2em;  
    }
    .redes a:hover{
-	color: #c6ff00;
+	color: #f5d720;
    } 
 	 .modal-content{
-		 background-color: #1a1a1a;
+		 background-color: #113173;
 		 color: #ffffff;
 	 }
 	 .modal-header{
@@ -884,6 +886,9 @@ a:after {
 			padding: 3%;
 			font-size: 1.4em;
 		}
+		.f h3{
+			font-size: 3.2em;
+		}
 	 }
 	@media (min-width: 576px) and (max-width: 768px) { 
 		p {
@@ -935,6 +940,12 @@ a:after {
 		#portfolio .text{
 			font-size: 1em !important;
 		}
+		#headerwrap h3{
+			text-align: left;
+			width: 30%;
+			font-size: 50px;
+			text-shadow: 2px 2px 4px #1d2131;
+		}		
 
 	 }
 	@media (min-width:  1200px)  { 
@@ -955,9 +966,49 @@ a:after {
 		.btn{
 			font-size: 0.9em;
 		}
+		#headerwrap h3{
+			text-align: left;
+			width: 30%;
+			font-size: 50px;
+			text-shadow: 2px 2px 4px #1d2131;
+		}		
 	 }
 
 	 #carros .owl-carousel .owl-item img{
 	 	max-width: 100px;
 	 	max-height: 200px;
 	 }
+
+	.navbar-default{
+		 background-color: #133886;		 
+		 border:none;
+		 padding-left: 2%;
+		 padding-right: 2.5%;
+		 margin-bottom: 0px;
+		 border-radius: 0px;
+	 }
+	 .navbar-default .navbar-nav > li > a{
+		color: #f2f2f2;
+		font-size: 1.2em;		
+	 }
+	 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+		 color: #f5d720;		 
+	 }
+	 .menu-contenido #principal{
+			position: absolute;
+			bottom: 0;
+			left: 200px;
+			width: 80%;
+	 }
+	 .menu-contenido #principal  > li:hover{
+		border-bottom: #f5d720 3px solid;
+	 }
+	 .menu-contenido #principal  > li {
+		 margin-left: 4%;
+		 padding-bottom: 5px;
+	 }
+	 .menu-contenido{
+		padding-top: 2%;
+	 }
+	 
+	 

@@ -20,7 +20,7 @@
             },
             {
                 'title':'instagram',
-                'url':'https://www.instagram.com/Tireman-Center/',
+                'url':'https://www.instagram.com/tireman_center/',
                 'img':'fa fa-instagram'
             },
             {
@@ -177,7 +177,7 @@
             },
             {
                 'titulo':'kia',
-                'url':'./assets/img/carros/kia.png'
+                'url':'./assets/img/carros/kia.jpg'
             },
             {
                 'titulo':'maserati',
@@ -221,7 +221,8 @@
         var menu = this;
         menu.title= empresa.nombre;
         menu.redes=empresa.link;   
-        menu.email=empresa.email;     
+        menu.email=empresa.email;   
+        menu.logo= empresa.logo;  
         menu.menu=[{
             'id':1,
             'titulo':'Inicio',
@@ -246,12 +247,11 @@
         }      
           
      ];
-     console.log(menu.lista,menu.redes);
     }]);
     app.controller('home',['empresa',function (empresa) {
         var home = this;
         home.title= empresa.nombre;
-        home.subtitle="Todas las llantas para todo auto";
+        home.subtitle="Todo lo que necesitas en un solo lugar";
         home.logo= empresa.logo;
     }]);
     app.controller('marcas',['empresa',function (empresa) {
@@ -319,7 +319,7 @@
                 scope.initCarousel = function(element) {
                   // provide any default options you want
                     var defaultOptions = {
-                        center:false,
+                        center:true,
                         lazyLoad:true,
                         loop:true,
                         nav:false,
