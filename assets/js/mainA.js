@@ -127,7 +127,7 @@
         'marcas':[
             {
                 'titulo':'GoodYear',
-                'url':'./assets/img/marcas/goodYear.png'
+                'url':'./assets/img/marcas/goodyear-min.png'
             },
             {
                 'titulo':'GoodRide',
@@ -279,8 +279,7 @@
         servicios.title="Nuestros servicios";
         servicios.parrafo="Ofrecemos los siguientes servicios.";
         servicios.list=empresa.Servicios;
-        servicios.buttomText="Leer mas";
-        console.log(servicios.list);
+        servicios.buttomText="Leer mas";        
         servicios.viewmore= function () {
             console.log("hola");
             if(diServicios){
@@ -309,7 +308,33 @@
         servicios.dirreccion=empresa.dirreccion;
         servicios.redes=empresa.link; 
         servicios.ciudad=empresa.ciudad;   
-        servicios.list=empresa.Servicios;    
+        servicios.list=empresa.Servicios;   
+        servicios.enviarDatos=function (datosf) {
+            console.log(datosf);
+            $.ajax({
+                    url: './assets/src/enviardatos.php',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {Name: datosf.Name , Email: datosf.Email,Subject: datosf.Subject,Service:datosf.Service,Mensaje:datosf.Mensaje},
+                })
+                .done(function(data) {
+                    console.log(data);
+                    console.log("success");
+                    var html = '<div class="alert alert-info" role="alert">';
+                        html+='<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                        html+='<span aria-hidden="true">&times;</span></button>';
+                        html += data.respuesta;
+                        html += '</div>';
+                    $('#mensaje').html(html);
+                    
+                })
+                .fail(function() {
+                    console.log("error");
+                })
+                .always(function() {
+                    console.log("complete");
+                });
+        }; 
     }])
     app.directive("owlCarousel", function() {
         return {

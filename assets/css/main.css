@@ -409,7 +409,7 @@ a:after {
 	color: #f5d720;
    } 
 	 .modal-content{
-		 background-color: #113173;
+		 background-color: #29304a;
 		 color: #ffffff;
 	 }
 	 .modal-header{
@@ -976,7 +976,8 @@ a:after {
 
 	 #carros .owl-carousel .owl-item img{
 	 	max-width: 100px;
-	 	max-height: 200px;
+		max-height: 200px;
+		margin: auto;
 	 }
 
 	.navbar-default{

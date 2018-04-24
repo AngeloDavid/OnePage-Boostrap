@@ -145,7 +145,7 @@
 								<span>Pagos</span> 
 								<span>Ágiles</span>
 								<span><i class="fa fa-cc-visa" aria-hidden="true"></i>
-									  <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+									  <i class="fa fa-cc-mastercard" aria-hidden="true"></i><br>
 									  <i class="fa fa-cc-diners-club" aria-hidden="true"></i>
 									  <i class="fa fa-cc-amex" aria-hidden="true"></i>
 								</span>
@@ -249,39 +249,43 @@
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<form action="">				
+				<form action="" novalidate name="form_contact">				
 					<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<h4 class="modal-title" id="myModalLabel">Tu opion es importante </h4>
 					
 					</div>
 					<div class="modal-body">
-						
+						<div id="mensaje"></div>
 							<div class="row">
 								<div class="col-lg-6 col-xs-12 col-md-6 col-sm-6">
 									<div class="form-group">
-										<label for="exampleInputEmail1">E-mail</label>
-										<input type="email" class="form-control" id="exampleInputEmail1" placeholder="ejemplo@correo.com">
+										<label for="email">E-mail</label>
+										<input type="email" class="form-control" id="Email" name="Email" ng-model="datosf.Email" placeholder="ejemplo@correo.com" required>
+										<span class="fa fa-exclamation-circle" aria-hidden="true" ng-show="!form_contact.Email.$pristine && form_contact.Email.$error.required">  El Email es requerido.</span>
+										<span class="fa fa-exclamation-circle" aria-hidden="true" ng-show="!form_contact.Email.$pristine && form_contact.Email.$error.email">  Por favor Ingrese un Email valido</span>
 									</div>
 								</div>
 								<div class="col-lg-6 col-xs-12 col-md-6 col-sm-6">
 									<div class="form-group">
-										<label for="exampleInputPassword1">Nombre</label>
-										<input type="text" class="form-control" id="exampleInputPassword1" placeholder=" juanito perez">
+										<label for="Name">Nombre</label>
+										<input type="text" class="form-control" id="Name" name="Name" ng-model="datosf.Name" placeholder=" juanito perez" required >
+										<span class="fa fa-exclamation-circle" aria-hidden="true" ng-show="!form_contact.Name.$pristine && form_contact.Name.$error.required">  El Nombre es requerido.</span>
 									</div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-lg-6 col-xs-12 col-md-6 col-sm-6">
 									<div class="form-group">
-										<label for="exampleInputPassword1">Asunto</label>
-										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Información de ventas">
+										<label for="Subject">Asunto</label>
+										<input type="text" class="form-control" id="Subject" name="Subject" ng-model="datosf.Subject" placeholder="Información de ventas" required >
+										<span class="fa fa-exclamation-circle" aria-hidden="true" ng-show="!form_contact.Subject.$pristine && form_contact.Subject.$error.required">  Un Asunto es requerido.</span>
 									</div>
 								</div>
 								<div class="col-lg-6 col-xs-12 col-md-6 col-sm-6">
 									<div class="form-group">
 										<label for="exampleInputPassword1">¿Qué servicio le interesó?</label>
-										<select name="" id="" class="form-control">	
+										<select  id="Service" name="Service" ng-model="datosf.Service"class="form-control">	
 											<option value="{{itema.title}}" ng-repeat="itema in ct.list" >{{itema.title}}</option>			
 										</select>
 									</div>
@@ -289,14 +293,18 @@
 							</div>				
 							<div class="row">
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
-									<label for="exampleInputPassword1">Mensaje</label>
-									<textarea class="form-control" name="" id="" cols="30" rows="10"> Deseo más informacíon sobre ..</textarea>
+									<label for="Mensaje">Mensaje</label>
+									<textarea class="form-control"  id="Mensaje" name="Mensaje" ng-model="datosf.Mensaje" cols="30" rows="10" required ng-minlength="20" > Deseo más informacíon sobre ..</textarea>
+									<span class="fa fa-exclamation-circle" aria-hidden="true" ng-show="!form_contact.Mensaje.$pristine && form_contact.Mensaje.$error.required">  El Mensaje es requerido.</span>
+			  	<span class="fa fa-exclamation-circle" aria-hidden="true" ng-show="!form_contact.Mensaje.$pristine && form_contact.Mensaje.$error.minlength">  Minimo caracteres: 20.</span>
 								</div>
 							</div>			
 					</div>
 					<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Cerar</button>
-					<button type="button" class="btn btn-warning">Enviar </button>
+					<button type="button" class="btn btn-warning" ng-disabled='!form_contact.$valid' >Enviar </button>
+					<span  class="fa fa-exclamation-triangle" aria-hidden="true"  ng-click="ct.enviarDatos(datosf)" ng-show="!form_contact.Subject.$pristine && !form_contact.Email.$pristine && !form_contact.Mensaje.$pristine && !form_contact.$valid">
+							<strong>Datos Incorrectos!!!</strong>  Por favor, revise que la informacion sea correcta </span> 	
 					</div>
 				</form>
 			</div>
@@ -308,7 +316,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-	<script src="assets/js/classie.js"></script>
+	<script src="./assets/js/classie.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/smoothscroll.js"></script>
 	
