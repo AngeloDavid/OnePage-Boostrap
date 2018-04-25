@@ -131,35 +131,35 @@
             },
             {
                 'titulo':'GoodRide',
-                'url':'./assets/img/marcas/goodride.png'
+                'url':'./assets/img/marcas/goodride-min.png'
             },
             {
                 'titulo':'Hankook',
-                'url':'./assets/img/marcas/hankook.png'
+                'url':'./assets/img/marcas/hankook-min.png'
             },
             {
                 'titulo':'Dunlop',
-                'url':'./assets/img/marcas/dunlop.png'
+                'url':'./assets/img/marcas/dunlop-min.png'
             },
             {
                 'titulo':'Bridgestone',
-                'url':'./assets/img/marcas/bridgestone.png'
+                'url':'./assets/img/marcas/bridgestone-min.png'
             },
             {
                 'titulo':'Toyo',
-                'url':'./assets/img/marcas/toyo.png'
+                'url':'./assets/img/marcas/toyo-min.png'
             },
             {
                 'titulo':'westlake',
-                'url':'./assets/img/marcas/westlake.png'
+                'url':'./assets/img/marcas/westlake-min.png'
             },
             {
                 'titulo':'Valvoline',
-                'url':'./assets/img/marcas/valvoline.png'
+                'url':'./assets/img/marcas/valvoline-min.png'
             },
             {
                 'titulo':'Kendall',
-                'url':'./assets/img/marcas/kendall.png'
+                'url':'./assets/img/marcas/kendall-min.png'
             }
         ],
         'carros':[
