@@ -11,7 +11,7 @@
         'lat':'000',
         'lng':'00',
         'logo':'./assets/img/logo.png',
-        'telefono':'(593) 98 372 9540',
+        'telefono':'(593) 96 308 8818',
         'link':[
             {
                 'title':'facebook',
@@ -25,7 +25,7 @@
             },
             {
                 'title':'whatApp',
-                'url':"https://api.whatsapp.com/send?phone=593983729540&text=Hola,%20TiremanCenter%20me%20interesa%20su%20servicio",
+                'url':"https://api.whatsapp.com/send?phone=593963088818&text=Hola,%20TiremanCenter%20me%20interesa%20su%20servicio",
                 'img':'fa fa-whatsapp'
             }
             
