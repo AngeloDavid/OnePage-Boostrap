@@ -208,11 +208,22 @@
             {
                 'titulo':'volvo',
                 'url':'./assets/img/carros/volvo.png'
-            },
-            
+            },            
             {
                 'titulo':'VW',
                 'url':'./assets/img/carros/VW.png'
+            },
+            {
+                'titulo':'hyundai',
+                'url':'./assets/img/carros/hyundai.png'
+            },
+            {
+                'titulo':'citroen',
+                'url':'./assets/img/carros/citroen.png'
+            },
+            {
+                'titulo':'greatWall',
+                'url':'./assets/img/carros/greatWall.jpg'
             }
         ]
     });
@@ -353,7 +364,7 @@
                         loop:true,
                         nav:false,
                         dots:false,  
-                        autoplayTimeout:2000,  
+                        autoplayTimeout:1000,  
                         responsive:{
                             0:{
                                 items:1,

@@ -6,6 +6,15 @@
  * Version: 1.0
  * URL: http://blacktie.co
  */
+@font-face{
+	font-family: 'Nexa Bold';
+	src: url("../fonts/Nexa Bold.otf")
+}
+
+@font-face{
+	font-family: 'Nexa Light';
+	src: url("../fonts/Nexa Light.otf")
+}
 
 body {
   background-color: #f2f2f2;
@@ -346,7 +355,8 @@ a:after {
 	bottom: 0;
 	left: 100%;
 	right: 0;
-	background-color: #ffee0077;
+	/*background-color: #ffee0077;*/
+	background-color:#fbfbfbc2;
 	overflow: hidden;
 	width: 0;
 	height: 100%;
@@ -364,22 +374,35 @@ a:after {
   }
   
   #portfolio .text {
-	color: white;
-	font-size: 0.9em !important;
+	color: #ffffff;
+
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	width: 80%;
-  }
+	}
+	#portfolio .text h2{
+		font-family: 'Nexa Bold';
+		font-size: 2em ;
+		color: #29304a;
+	}
+	#portfolio .text p{
+		font-family: 'Nexa Light';
+		font-size: 1.5em ;
+		color: #29304a;
+	}
+	
+
+	
 
   #portfolio  .overlayr {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: #ffee0077;
+	background-color: #fbfbfbc2;
 	overflow: hidden;
 	width: 0;
 	height: 100%;
@@ -889,6 +912,12 @@ a:after {
 		.f h3{
 			font-size: 3.2em;
 		}
+		#portfolio .text h2{
+			font-size: 1.2em ;
+		}
+		#portfolio .text p{
+			font-size: 1em ;
+		}
 	 }
 	@media (min-width: 576px) and (max-width: 768px) { 
 		p {
@@ -904,6 +933,12 @@ a:after {
 		}
 		.btn{
 			    font-size: 0.79em;
+		}
+		#portfolio .text h2{
+			font-size: 2.5em ;
+		}
+		#portfolio .text p{
+			font-size: 2em ;
 		}
 	 }
 	@media (min-width: 768px) and (max-width: 992px) { 
@@ -922,7 +957,12 @@ a:after {
 			padding-right: 0px;
     	padding-left: 0px;
 		}
-		
+		#portfolio .text h2{
+			font-size: 1.5em ;
+		}	
+		#portfolio .text p{
+			font-size: 1em ;
+		}
 	 }
 	@media (min-width: 992px) and (max-width: 1200px) { 
 		.untitled{
@@ -945,7 +985,8 @@ a:after {
 			width: 30%;
 			font-size: 50px;
 			text-shadow: 2px 2px 4px #1d2131;
-		}		
+		}
+				
 
 	 }
 	@media (min-width:  1200px)  { 
@@ -960,7 +1001,7 @@ a:after {
 			font-size: 0.7em !important;
 		}
 		.untitled__slideContent span{
-			font-size: 12vmin;
+			font-size: 10vmin;
 		}
 
 		.btn{
@@ -972,6 +1013,7 @@ a:after {
 			font-size: 50px;
 			text-shadow: 2px 2px 4px #1d2131;
 		}		
+		
 	 }
 
 	 #carros .owl-carousel .owl-item img{
