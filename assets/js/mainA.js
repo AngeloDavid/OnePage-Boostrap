@@ -7,7 +7,7 @@
         'nombre':'Tireman Center',
         'email':'info@tireman-center.com',
         'dirreccion':'Ladron de Guevara y Toledo',
-        'ciudad':'Quito,Ecuador',
+        'ciudad':'Quito, Ecuador',
         'lat':'000',
         'lng':'00',
         'logo':'./assets/img/logo.png',

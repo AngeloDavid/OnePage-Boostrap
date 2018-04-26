@@ -329,10 +329,17 @@
 				zoom: 17,
 				center: uluru
 			  });
+			  var infowindow = new google.maps.InfoWindow();
 			  var marker = new google.maps.Marker({
 				position: uluru,
 				map: map
 			  });
+
+			google.maps.event.addListener(marker, 'click', function() {
+				var mensaje= '<h3>Tireman Center</h3><p style="color:#000" >Ladron de Guevara y Toledo</p>';
+				infowindow.setContent(mensaje);
+				infowindow.open(map, this);
+			});
 			}
 		  </script>
 		  <script async defer
